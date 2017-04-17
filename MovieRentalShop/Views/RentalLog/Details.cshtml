@@ -1,0 +1,53 @@
+﻿@model MovieRentalShop.Models.RentalLog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RentalLog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Movie)
+        </dt>
+        <dd class="lead">@Html.DisplayFor(model => model.Movie.Name)</dd>
+        <dd>@Html.DisplayFor(model => model.Movie.YearReleased)</dd>
+        <dd>@Html.DisplayFor(model => model.Genre.Name)</dd>
+        <dd>@Html.DisplayFor(model => model.Movie.Director)</dd>
+        <dd>@Html.ActionLink("Edit", "Movie", new { id = Model.Id })</dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+
+        <dd class="lead">@Html.DisplayFor(model => model.Customer.Name)</dd>
+        <dd>@Html.DisplayFor(model => model.Customer.PhoneNumber)</dd>
+        <dd>@Html.DisplayFor(model => model.Customer.Email)</dd>
+        <dd>@Html.ActionLink("Edit", "Customer", new { id = Model.Id })</dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckOutDate)
+        </dt>
+
+        <dd class="lead">
+            @Html.DisplayFor(model => model.NeatCheckOutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueBackDate)
+        </dt>
+
+        <dd class="lead">
+            @Html.DisplayFor(model => model.NeatDueBackDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

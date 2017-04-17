@@ -1,0 +1,34 @@
+﻿ 
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron">
+    <h1>Authorized Access Only</h1>
+</div>
+
+<div class="text-center">
+    <div class="col-md-6">
+        
+        <div class="col-md-6">
+            <h2>RENTAL LOG</h2>
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="View" onclick="location.href='@Url.Action("Index", "RentalLog")'" class="btn btn-primary" />
+            </div>
+        </div>
+        <h2>MOVIES</h2>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="Browse" onclick="location.href='@Url.Action("AdminIndex", "Movie")'" class="btn btn-primary" />
+            <input type="button" value="Rented" onclick="location.href='@Url.Action("Rented", "Admin")'" class="btn btn-primary" />
+            <input type="button" value="OverDue" onclick="location.href='@Url.Action("AdminIndex", "Movie")'" class="btn btn-primary" />
+            <input type="button" value="Create" onclick="location.href='@Url.Action("Index", "Movie")'" class="btn btn-primary" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>GENRES</h2>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="View All" onclick="location.href='@Url.Action("Index", "Genre")'" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+
+
